@@ -1,0 +1,17 @@
+columns:
+    name:
+        label: Naam
+        type: text
+        searchable: true
+    description:
+        label: 'Werk / Functie'
+        type: text
+        searchable: true
+    review:
+        label: Recentie
+        type: text
+        searchable: true
+    sort_order:
+        label: Volgorde
+        type: number
+        sortable: true

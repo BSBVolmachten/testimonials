@@ -1,0 +1,17 @@
+plugin:
+    name: 'bsbvolmachten.testimonials::lang.plugin.name'
+    description: 'bsbvolmachten.testimonials::lang.plugin.description'
+    author: 'BSB Volmachten'
+    icon: oc-icon-quote-right
+    homepage: ''
+permissions:
+    manage-testimonials:
+        tab: 'Recenties Beheren'
+        label: 'Recenties Beheren'
+navigation:
+    main-menu-item:
+        label: Recensies
+        url: bsbvolmachten/testimonials/testimonials
+        icon: icon-quote-right
+        permissions:
+            - manage-testimonials

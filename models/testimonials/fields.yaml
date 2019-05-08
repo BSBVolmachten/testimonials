@@ -1,0 +1,28 @@
+fields:
+    name:
+        label: Naam
+        span: left
+        required: 1
+        type: text
+    description:
+        label: 'Werk / Functie'
+        span: left
+        required: 1
+        type: text
+    review:
+        label: Recensie
+        size: large
+        span: left
+        required: 1
+        attributes:
+            maxlength: '400'
+        type: textarea
+    image:
+        label: Foto
+        mode: image
+        useCaption: 0
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: left
+        type: fileupload

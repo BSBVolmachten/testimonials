@@ -1,0 +1,17 @@
+name: Testimonials
+modelClass: BsbVolmachten\Testimonials\Models\Testimonials
+form: $/bsbvolmachten/testimonials/models/testimonials/fields.yaml
+defaultRedirect: bsbvolmachten/testimonials/testimonials
+create:
+    title: 'Recensie Aanmaken'
+    redirect: 'bsbvolmachten/testimonials/testimonials/update/:id'
+    redirectClose: bsbvolmachten/testimonials/testimonials
+    flashSave: 'Recensie Opgeslagen'
+update:
+    title: 'Recensie Bewerken'
+    redirect: bsbvolmachten/testimonials/testimonials
+    redirectClose: bsbvolmachten/testimonials/testimonials
+    flashSave: 'Recensie Opgeslagen'
+    flashDelete: 'Recensie Verwijderd'
+preview:
+    title: 'Recensie Weergeven'
