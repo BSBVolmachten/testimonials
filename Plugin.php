@@ -1,4 +1,4 @@
-<?php namespace BsbVolmachten\Testimonials;
+<?php namespace Bsbvolmachten\Testimonials;
 
 use System\Classes\PluginBase;
 

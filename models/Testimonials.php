@@ -1,4 +1,4 @@
-<?php namespace BsbVolmachten\Testimonials\Models;
+<?php namespace Bsbvolmachten\Testimonials\Models;
 
 use Model;
 
