@@ -8,3 +8,6 @@
     - builder_table_update_bsbvolmachten_testimonials_main.php
 1.0.4:
     - 'Changed namespace from BsbVolmachten to Bsbvolmachten'
+1.0.5:
+    - 'Fix sort order'
+    - bsbvolmachten_fix_sort_order.php
