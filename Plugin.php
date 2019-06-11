@@ -6,6 +6,9 @@ class Plugin extends PluginBase
 {
     public function registerComponents()
     {
+        return [
+            'Bsbvolmachten\Testimonials\Components\Testimonials' => 'testimonials',
+        ];
     }
 
     public function registerSettings()
