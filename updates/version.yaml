@@ -13,3 +13,5 @@
     - bsbvolmachten_fix_sort_order.php
 1.1.0:
     - 'Added component to plugin'
+1.1.1:
+    - 'return false if no records are found'
