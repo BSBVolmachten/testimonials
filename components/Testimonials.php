@@ -16,6 +16,12 @@ class Testimonials extends ComponentBase {
 
     public function testimonials()
     {
-        return Testimonial::orderBy('sort_order', 'ASC')->get();
+        $testimonials = Testimonial::orderBy('sort_order', 'ASC')->get();
+
+        if($testimonials->isEmpty()) {
+            return false;
+        } else {
+            return $testimonials;
+        }
     }
 }
