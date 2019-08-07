@@ -1,6 +1,7 @@
 {% if testimonials %}
 {% if __SELF__.property('fullWidth') %}
-    {% set outerClass = 'testinmonial-wrapper owl-carousel" data-dots=".testinmonial-control' %}
+    {% set outerClass = 'testinmonial-wrapper owl-carousel' %}
+    {% set dataDots = 'data-dots=".testinmonial-control"' %}
     {% set style = 'style-2' %}
     {% set matchItem = '' %}
 {% else %}
@@ -13,7 +14,7 @@
         <div class="heading">
             <h3 class="heading-section">Wat onze klanten zeggen</h3>
         </div>
-        <div class="{{ outerClass }}">
+        <div class="{{ outerClass }}" {{ dataDots }}>
             {% for testimonial in testimonials %}
             {% if __SELF__.property('fullWidth') %}
                 {% set image = testimonial.image.thumb(80,80,{'mode':'crop'}) %}

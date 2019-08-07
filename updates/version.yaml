@@ -17,3 +17,5 @@
     - 'return false if no records are found'
 1.1.2:
     - 'Optimised component and added snippet'
+1.1.3:
+    - 'dataDots bugfix'
