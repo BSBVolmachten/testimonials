@@ -1,0 +1,58 @@
+{% if testimonials %}
+{% if __SELF__.property('fullWidth') %}
+    {% set outerClass = 'testinmonial-wrapper owl-carousel" data-dots=".testinmonial-control' %}
+    {% set style = 'style-2' %}
+    {% set matchItem = '' %}
+{% else %}
+    {% set outerClass = 'row' %}
+    {% set style = 'style-1' %}
+    {% set matchItem = 'match-item' %}
+{% endif %}
+<section class="testinmonials testinmonials-layout {{ style }}">
+    <div class="container">
+        <div class="heading">
+            <h3 class="heading-section">Wat onze klanten zeggen</h3>
+        </div>
+        <div class="{{ outerClass }}">
+            {% for testimonial in testimonials %}
+            {% if __SELF__.property('fullWidth') %}
+                {% set image = testimonial.image.thumb(80,80,{'mode':'crop'}) %}
+            {% else %}
+                {% set image = testimonial.image.thumb(57,57,{'mode':'crop'}) %}
+            {% endif %}
+            {% if not __SELF__.property('fullWidth') %}
+            <div class="col-md-4 col-sm-6">
+            {% endif %}
+                <div class="testinmonial-item {{ style }} {{ matchItem }}">
+                    <div class="content">
+                        <p>{{ testimonial.review }}</p>
+                    </div>
+                    <div class="personal">
+                        <div class="avatar">
+                            <img src="{{ image }}" alt="{{ testimonial.name }}" />
+                        </div>
+                        <div class="info">
+                            <div class="name">
+                                <span>{{ testimonial.name }}</span>
+                            </div>
+                            <div class="title-job">
+                                <span>{{ testimonial.description }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% if not __SELF__.property('fullWidth') %}
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+        {% if __SELF__.property('fullWidth') %}
+        <ul class="owl-dots testinmonial-control">
+            <li class="owl-dot active"></li>
+            <li class="owl-dot"></li>
+            <li class="owl-dot"></li>
+        </ul>
+        {% endif %}
+    </div>
+</section>
+{% endif %}

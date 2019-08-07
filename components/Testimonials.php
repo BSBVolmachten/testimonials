@@ -14,14 +14,28 @@ class Testimonials extends ComponentBase {
         ];
     }
 
-    public function testimonials()
-    {
-        $testimonials = Testimonial::orderBy('sort_order', 'ASC')->get();
-
-        if($testimonials->isEmpty()) {
-            return false;
+    public function onRun() {
+        $testimonials = $this->getTestimonials();
+        if ($testimonials->isNotEmpty()) {
+            $this->page['testimonials'] = $testimonials;
         } else {
-            return $testimonials;
+            $this->page['testimonials'] = false;
         }
+    }
+
+    public function getTestimonials()
+    {
+        return Testimonial::orderBy('sort_order', 'ASC')->get();
+    }
+    public function defineProperties()
+    {
+        return [
+            'fullWidth' => [
+                'title'             => 'Volledige breedte',
+                'description'       => 'Maakt de testimonials de volledige breedte van de pagina',
+                'default'           => false,
+                'type'              => 'checkbox'
+            ],
+        ];
     }
 }
